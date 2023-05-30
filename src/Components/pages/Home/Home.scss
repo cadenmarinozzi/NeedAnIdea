@@ -1,0 +1,187 @@
+@use 'vars.scss' as *;
+@use 'colors.scss' as *;
+
+.home {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    width: 100%;
+
+    gap: 40px;
+
+    .title {
+        font-size: 45pt;
+    }
+
+    .result {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 30px;
+
+        .result-text {
+            max-width: 50%;
+        }
+
+        .button {
+            outline: 0;
+            border: 1px solid $medium;
+
+            border-radius: 8px;
+
+            padding-inline: 15px;
+            padding-block: 10px;
+
+            background: transparent;
+
+            color: $medium;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+
+            display: flex;
+            flex-direction: row;
+
+            gap: 10px;
+
+            align-items: center;
+        }
+
+        .button:hover {
+            border-color: $dark;
+            color: $dark;
+        }
+
+        .button:active {
+            border-color: $darkest;
+            color: $darkest;
+        }
+    }
+
+    .loader {
+        display: flex;
+        flex-direction: row;
+
+        gap: 10px;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 10px;
+
+        width: 100%;
+
+        .icon {
+            color: $medium;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+        .icon:hover {
+            color: $dark;
+        }
+
+        .icon:active {
+            color: $darkest;
+        }
+
+        .hero-input {
+            display: flex;
+            flex-direction: row;
+
+            align-items: center;
+
+            gap: 10px;
+
+            border-radius: 8px;
+            border: 1px solid $medium;
+
+            padding-inline: 15px;
+            padding-block: 10px;
+
+            width: 50%;
+
+            position: relative;
+
+            overflow: clip;
+
+            .input {
+                background: transparent;
+
+                outline: 0;
+                border: none;
+
+                width: 100%;
+            }
+
+            .placeholder {
+                position: absolute;
+
+                color: $medium;
+
+                pointer-events: none;
+
+                opacity: 1;
+                display: block;
+            }
+
+            .input:not(:focus):not(.placeholder-hidden)+.placeholder {
+                animation: placeholder-text-reveal 2s infinite;
+            }
+
+            .input:focus+.placeholder {
+                display: none;
+            }
+
+            .placeholder-hidden {
+                display: none;
+            }
+        }
+
+        .randomize-icon {
+            position: relative;
+        }
+    }
+
+    .caption {
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+
+        gap: 5px;
+        color: $medium;
+
+        img {
+            filter: opacity(0.4) drop-shadow(0 0 0 $medium);
+        }
+    }
+}
+
+@keyframes placeholder-text-reveal {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

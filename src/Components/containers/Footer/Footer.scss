@@ -1,0 +1,21 @@
+@use 'vars.scss' as *;
+@use 'colors.scss' as *;
+
+.footer {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+    position: absolute;
+
+    gap: 10px;
+
+    bottom: 0;
+
+    padding: 10px;
+
+    width: calc(100% - 20px);
+
+    color: $medium;
+}

@@ -1,0 +1,38 @@
+@use 'vars.scss' as *;
+@use 'colors.scss' as *;
+
+.tooltip {
+    padding: 10px;
+
+    border: 1px solid $medium;
+    border-radius: 8px;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    z-index: 1;
+
+    background: white;
+    color: $medium;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: 0.2s;
+
+    margin-left: calc(100% + 10px);
+
+    width: max-content;
+    max-width: 220px;
+
+    .message {
+        overflow: auto;
+    }
+}
+
+.tooltip-show {
+    opacity: 1;
+}
