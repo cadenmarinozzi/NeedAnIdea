@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/NeedAnIdea/static/css/main.e1a5e06c.css",
+    "main.js": "/NeedAnIdea/static/js/main.b7f2503d.js",
+    "index.html": "/NeedAnIdea/index.html",
+    "main.e1a5e06c.css.map": "/NeedAnIdea/static/css/main.e1a5e06c.css.map",
+    "main.b7f2503d.js.map": "/NeedAnIdea/static/js/main.b7f2503d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e1a5e06c.css",
+    "static/js/main.b7f2503d.js"
+  ]
+}
